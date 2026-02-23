@@ -4,7 +4,7 @@ source ./utils.sh
 
 BIN=../build/nobled
 
-HOME1=.duke
+HOME1=/data/temp-nobled
 
 for arg in "$@"; do
   case $arg in
