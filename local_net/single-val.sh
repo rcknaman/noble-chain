@@ -16,7 +16,7 @@ for arg in "$@"; do
 done
 
 if ! [ -f $HOME1/data/priv_validator_state.json ]; then
-  $BIN init validator --chain-id "duke-1" --home $HOME1 &>/dev/null
+  $BIN init validator --chain-id "grand-1" --home $HOME1 &>/dev/null
 
   $BIN keys add validator --home $HOME1 --keyring-backend test &>/dev/null
   $BIN genesis add-genesis-account validator 1000000ustake --home $HOME1 --keyring-backend test
@@ -28,7 +28,7 @@ if ! [ -f $HOME1/data/priv_validator_state.json ]; then
 
   update_genesis $HOME1 $AUTHORITY
 
-  $BIN genesis gentx validator 1000000ustake --chain-id "duke-1" --home $HOME1 --keyring-backend test &>/dev/null
+  $BIN genesis gentx validator 1000000ustake --chain-id "grand-1" --home $HOME1 --keyring-backend test &>/dev/null
   $BIN genesis collect-gentxs --home $HOME1 &>/dev/null
 fi
 
