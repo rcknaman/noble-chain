@@ -23,8 +23,8 @@ if ! [ -f $HOME1/data/priv_validator_state.json ]; then
   AUTHORITY=$($BIN keys add authority --home $HOME1 --keyring-backend test --output json | jq .address)
   $BIN genesis add-genesis-account authority 4000000ustake --home $HOME1 --keyring-backend test
   $BIN genesis add-genesis-account noble1uvzk6qvakghz3rxrgqejzvqyq47rrqr7t62zdg 30000000000000000uusdc --home $HOME1 --keyring-backend test
-  # echo "derive blast diagram blue until borrow movie town special response million cream head column guess tooth taste strategy there crazy senior jewel wrestle coin" | $BIN keys add faucet --home $HOME1 --keyring-backend test --recover &>/dev/null
-  # $BIN genesis add-genesis-account faucet 10000000ustake,10000000000000uusdc --home $HOME1 --keyring-backend test
+  echo "derive blast diagram blue until borrow movie town special response million cream head column guess tooth taste strategy there crazy senior jewel wrestle coin" | $BIN keys add faucet --home $HOME1 --keyring-backend test --recover &>/dev/null
+  $BIN genesis add-genesis-account faucet 10000000ustake,4000000000000000000uusdc --home $HOME1 --keyring-backend test
 
   update_genesis $HOME1 $AUTHORITY
 
